@@ -1,9 +1,7 @@
 package absfactory;
 
-public class WindowsCheckbox implements Checkbox{
-
-    @Override
+class WindowsCheckbox implements Checkbox {
     public void render() {
-        System.out.println("Rendering Windows checkbox");
+        System.out.println("Rendering Windows Checkbox");
     }
 }

@@ -1,8 +1,7 @@
 package absfactory;
 
-public class WindowsButton implements Button{
-
-    @Override
+// Concrete Products - Windows
+class WindowsButton implements Button {
     public void render() {
         System.out.println("Rendering Windows Button");
     }

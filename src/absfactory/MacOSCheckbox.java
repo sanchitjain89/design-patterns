@@ -1,9 +1,7 @@
 package absfactory;
 
-public class MacOSCheckbox implements Checkbox{
-
-    @Override
+class MacOSCheckbox implements Checkbox {
     public void render() {
-        System.out.println("Rendering MacOS checkbox");
+        System.out.println("Rendering MacOS Checkbox");
     }
 }

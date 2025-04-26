@@ -1,6 +1,8 @@
 package absfactory;
 
-public interface GUIFactory {
+// Abstract Factory
+interface GUIFactory {
     Button createButton();
+
     Checkbox createCheckbox();
 }

@@ -1,5 +1,5 @@
 package absfactory;
 
-public interface Checkbox {
+interface Checkbox {
     void render();
 }

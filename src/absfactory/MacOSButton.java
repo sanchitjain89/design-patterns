@@ -1,9 +1,8 @@
 package absfactory;
 
-public class MacOSButton implements Button{
-
-    @Override
+// Concrete Products - MacOS
+class MacOSButton implements Button {
     public void render() {
-        System.out.println("Rendering MacOS button");
+        System.out.println("Rendering MacOS Button");
     }
 }

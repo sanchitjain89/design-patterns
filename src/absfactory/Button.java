@@ -1,5 +1,6 @@
 package absfactory;
 
-public interface Button {
+// Abstract Products
+interface Button {
     void render();
 }
