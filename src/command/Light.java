@@ -1,15 +1,15 @@
-package command.second;
+package command;
 
-// Receiver Class (Light)
+// Receiver
 class Light {
     private boolean isOn = false;
 
-    public void turnOn() {
+    void turnOn() {
         isOn = true;
         System.out.println("Light is ON");
     }
 
-    public void turnOff() {
+    void turnOff() {
         isOn = false;
         System.out.println("Light is OFF");
     }

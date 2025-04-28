@@ -1,19 +1,17 @@
-package command.second;
+package command;
 
-// Concrete Command for Light
+// Concrete Commands
 class LightOnCommand implements Command {
     private Light light;
 
-    public LightOnCommand(Light light) {
+    LightOnCommand(Light light) {
         this.light = light;
     }
 
-    @Override
     public void execute() {
         light.turnOn();
     }
 
-    @Override
     public void undo() {
         light.turnOff();
     }

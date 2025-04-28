@@ -1,8 +1,7 @@
-package command.first;
+package command;
 
-// Command interface
+// Command Interface
 interface Command {
-
     void execute();
 
     void undo();
