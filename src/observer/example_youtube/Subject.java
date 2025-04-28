@@ -1,9 +1,11 @@
-package observer.example;
+package observer.example_youtube;
 
-// Subject Interface
+// Subject interface
 interface Subject {
+
     void addObserver(Observer observer);
     void removeObserver(Observer observer);
-    void notifyObservers();
+    void notifyObservers(String videoTitle);
+
 }
 

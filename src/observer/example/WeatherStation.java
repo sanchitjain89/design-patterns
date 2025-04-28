@@ -3,17 +3,14 @@ package observer.example;
 import java.util.ArrayList;
 import java.util.List;
 
-// Concrete Subject
+// Concrete Subject: Weather Station
 class WeatherStation implements Subject {
-    private List<Observer> observers;
-    private WeatherData weatherData;
 
-    public WeatherStation() {
-        observers = new ArrayList<>();
-    }
+    private List<Observer> observers = new ArrayList<>();
+    private float temperature;
 
     @Override
-    public void registerObserver(Observer observer) {
+    public void addObserver(Observer observer) {
         observers.add(observer);
     }
 
@@ -25,13 +22,14 @@ class WeatherStation implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(weatherData);
+            observer.update(temperature);
         }
     }
 
-    // Method that simulates weather changes
-    public void setMeasurements(float temperature, float humidity, float pressure) {
-        this.weatherData = new WeatherData(temperature, humidity, pressure);
+    // Method to update temperature and notify observers
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
+        System.out.println("WeatherStation: Temperature updated to " + temperature + "°C");
         notifyObservers();
     }
 }
