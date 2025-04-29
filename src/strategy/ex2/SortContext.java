@@ -18,4 +18,3 @@ class SortContext {
         strategy.sort(numbers);
     }
 }
-
