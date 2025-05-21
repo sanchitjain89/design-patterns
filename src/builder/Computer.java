@@ -1,15 +1,14 @@
-package builder.first;
+package builder;
 
-public class Computer {
-
+// Product class
+class Computer {
     private String CPU;
     private String RAM;
     private String storage;
-
     private boolean isGraphicsCardEnabled;
     private boolean isBluetoothEnabled;
 
-    public Computer(ComputerBuilder builder) {
+    private Computer(ComputerBuilder builder) {
         this.CPU = builder.CPU;
         this.RAM = builder.RAM;
         this.storage = builder.storage;
@@ -28,15 +27,17 @@ public class Computer {
                 '}';
     }
 
-    public static class ComputerBuilder{
+    // Getters
+
+    // Builder class
+    public static class ComputerBuilder {
         private String CPU;
         private String RAM;
         private String storage;
-
         private boolean isGraphicsCardEnabled;
         private boolean isBluetoothEnabled;
 
-        public ComputerBuilder(String CPU, String RAM){
+        public ComputerBuilder(String CPU, String RAM) {
             this.CPU = CPU;
             this.RAM = RAM;
         }
@@ -46,17 +47,17 @@ public class Computer {
             return this;
         }
 
-        public ComputerBuilder enableGraphicsCard(boolean graphicsCardEnabled) {
-            isGraphicsCardEnabled = graphicsCardEnabled;
+        public ComputerBuilder enableGraphicsCard(boolean enable) {
+            this.isGraphicsCardEnabled = enable;
             return this;
         }
 
-        public ComputerBuilder enableBluetooth(boolean bluetoothEnabled) {
-            isBluetoothEnabled = bluetoothEnabled;
+        public ComputerBuilder enableBluetooth(boolean enable) {
+            this.isBluetoothEnabled = enable;
             return this;
         }
 
-        public Computer build(){
+        public Computer build() {
             return new Computer(this);
         }
     }
