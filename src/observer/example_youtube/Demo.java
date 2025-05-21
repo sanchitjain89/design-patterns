@@ -1,6 +1,6 @@
 package observer.example_youtube;
 
-public class ObserverPatternSimpleExample {
+public class Demo {
     public static void main(String[] args) {
         // Create YouTube Channel (Subject)
         YouTubeChannel channel = new YouTubeChannel();
