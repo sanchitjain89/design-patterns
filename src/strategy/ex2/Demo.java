@@ -1,6 +1,6 @@
 package strategy.ex2;
 
-public class StrategyPatternExample {
+public class Demo {
     public static void main(String[] args) {
         SortContext context = new SortContext();
         int[] numbers = {5, 2, 9, 1, 5, 6};

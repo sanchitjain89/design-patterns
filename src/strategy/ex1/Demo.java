@@ -1,9 +1,9 @@
 package strategy.ex1;
 
 // Usage
-public class DemoExample {
+public class Demo {
     public static void main(String[] args) {
-        ShoppingCart cart = new ShoppingCart();
+        PaymentService cart = new PaymentService();
 
         // Pay with Credit Card
         cart.setPaymentStrategy(new CreditCardPayment());

@@ -1,7 +1,7 @@
 package strategy.ex1;
 
 // Context
-class ShoppingCart {
+class PaymentService {
     private PaymentStrategy paymentStrategy;
 
     public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
